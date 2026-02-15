@@ -1,0 +1,166 @@
+:root {
+  /* Colors */
+  /* Brand Colors */
+  --primary: #0f172a; /* Deep Navy (Hero, Footer, Headings) */
+  --accent: #ccff00; /* Volt Green (Buttons, Highlights) */
+
+  /* Neutral Palette (The Greyscale) */
+  --text-main: #334155; /* Slate (Standard Body Text) */
+
+  /* Background Layers */
+  --bg-page: #f8fafc; /* Very Light (The main body background) */
+  --bg-section: #f1f5f9; /* The "Background" color I gave you earlier */
+
+  /* Fonts */
+  --font-heading: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/*GLOBAL STYLES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+h3,
+h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.cta-btn {
+  background-color: var(--accent);
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.8rem;
+  border-radius: 999px;
+  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+}
+.cta-btn:hover {
+  background-color: #bae600;
+  transform: translateY(-2px);
+}
+.cta-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-flex {
+  background-color: var(--bg-section);
+  padding: 2rem;
+  border-radius: 5rem;
+  margin: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/*****HEADER SECTION *****/
+.image-logo {
+  max-width: 200px;
+  width: 100%;
+}
+.image-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.header-container {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 28vh;
+}
+.nav-links ul {
+  display: flex;
+  gap: 1rem;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: underline;
+  color: #ffffff;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* HERO SECTION */
+.hero {
+  background-image: url(./assets/background-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+#mission .cta-btn {
+  margin: 2rem;
+}
+
+#mission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  white-space: wrap;
+}
+
+/* LEAGUES SECTION */
+.img-container {
+  max-width: 300px;
+  width: 100%;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10rem;
+}
+
+/* TEAM MEMBERES SECTION */
+#team .img-container {
+  max-width: 300px;
+  width: 100%;
+}
+#team .img-container img {
+  border-radius: 10rem;
+}
+
+#team h2 {
+  text-align: center;
+}
