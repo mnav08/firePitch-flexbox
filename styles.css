@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  /* Brand Colors */
+
   --primary: #0f172a; /* Deep Navy (Hero, Footer, Headings) */
   --accent: #ccff00; /* Volt Green (Buttons, Highlights) */
 
@@ -22,6 +22,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--font-body);
   font-size: 1.125rem;
@@ -56,7 +57,6 @@ h4 {
   font-weight: 600;
   padding: 0.8rem;
   border-radius: 999px;
-  width: fit-content;
   text-decoration: none;
   display: inline-block;
 }
@@ -66,7 +66,7 @@ h4 {
 }
 .cta-btn:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card-flex {
@@ -79,11 +79,26 @@ h4 {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.img-container {
+  max-width: 300px;
+  width: 100%;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10rem;
+}
+.flex-column {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+/*GLOBAL STYLES*/
 
 /*****HEADER SECTION *****/
 .image-logo {
-  max-width: 200px;
-  width: 100%;
+  width: min(200px, 100%);
 }
 .image-logo img {
   width: 100%;
@@ -122,10 +137,7 @@ h4 {
   background-position: center;
   background-size: cover;
   min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  flex-direction: column;
+
   gap: 3.5rem;
 }
 #mission .cta-btn {
@@ -133,32 +145,7 @@ h4 {
 }
 
 #mission {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   padding: 2rem;
-  white-space: wrap;
-}
-
-/* LEAGUES SECTION */
-.img-container {
-  max-width: 300px;
-  width: 100%;
-}
-.img-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 10rem;
-}
-
-/* TEAM MEMBERES SECTION */
-#team .img-container {
-  max-width: 300px;
-  width: 100%;
-}
-#team .img-container img {
-  border-radius: 10rem;
 }
 
 #team h2 {
